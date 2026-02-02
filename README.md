@@ -45,5 +45,22 @@ mkdir /usr/src/app
 
 ```bash
 docker container cp ./<local-file> <repo-name>:/user/src/app/<local-file>
+
+echo "otherwise, build based off Dockerfile like below code. -t == tag "
+
+docker build -t <new-name> .
+
+docker run <new-name> 
+
+docker run -it <new-name> bash #-it == interactive, no bash == repl
 ```
 
+###### Removing Images
+
+```bash
+docker image ls
+
+docker image --help 
+
+docker image rm <new-name>
+```
