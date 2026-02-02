@@ -1,6 +1,10 @@
 FROM node:24
 
-# To avoid overriding sys files, sets a workign directory
+# To avoid overriding sys files, sets a working directory
 WORKDIR /usr/src/app
 
-COPY ./README.md ./README.md
+COPY . .
+
+RUN npm install
+
+CMD DEBUG=playground:* npm run start
