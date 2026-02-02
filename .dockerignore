@@ -1,4 +1,13 @@
 .dockerignore
+
 .gitignore
+
 node_modules
+
 Dockerfile
+
+.git
+
+npm-debug.log
+
+.npmrc

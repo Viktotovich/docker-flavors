@@ -1,3 +1,7 @@
+Credits >>
+
+https://fullstackopen.com/en/part12/building_and_configuring_environments
+
 # Starter flavors
 
 ```bash
@@ -39,6 +43,10 @@ docker container rm <repo-name>
 docker container run -it --name <new-name> <online-repo-name:version> bash
 
 mkdir /usr/src/app
+
+# existing + non-blocking port
+
+docker run --name <container-new-name> -p <new-port>:<default-port> <image-name>
 ```
 
 ###### copy from local?
@@ -63,4 +71,20 @@ docker image ls
 docker image --help 
 
 docker image rm <new-name>
+```
+
+
+###### Docker cleanup
+
+
+```bash
+# Garbage collect old containers
+docker container prune
+
+# Reuse a container
+docker stop <new-name>
+
+docker start <new-name>
+
+docker restart <new-name>
 ```
